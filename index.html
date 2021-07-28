@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <title> مكتبة البيان</title>
+        <link rel="shortcut icon" href="imges/book-open-solid.svg" type="image/x-icon"/>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;400&display=swap" rel="stylesheet">
+        
+        <script  src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script  src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+        
+        <link 
+            rel="stylesheet" 
+            href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" 
+            integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" 
+            crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="css/style.css" type="text/css"> 
+
+    </head>
+
+    <body>
+        <audio autoplay loop  id="_audio">
+            <source src="audio/beautiful_piano_music_vol_3_relaxing_music_for_studying_sleep_or_relaxation.mp3" type="audio/ogg">
+            <source src="audio/beautiful_piano_music_vol_3_relaxing_music_for_studying_sleep_or_relaxation.mp3" type="audio/mpeg">
+        </audio>
+
+        <!--Header-->
+        <!-- Navbar Section -->
+        <header>
+            <img src="imges/vector_bg.png" class="main__img">
+            <div class="navbar">
+                <nav>
+                    <div class="navbar__toggle" id="mobile-menu">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                    <ul class="navbar__menu">
+                        <li class="navbar__item">
+                            <a onclick="mute()">
+                                <label class="navbar__btn">
+                                    <input id="mute" type="checkbox" checked>
+                                    <div class="icon-box">
+                                        <i class="fas fa-music"></i>
+                                    </div>
+                                </label>
+                            </a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="#sci-books" class="navbar__links" id="sci_books-page">كتب علمية</a>
+                        </li>
+                        <li class="navbar__item">
+                        <a href="#quots" class="navbar__links" id="quots-page">إقتباسات</a>
+                        </li>
+                        <li class="navbar__item">
+                        <a href="#authors_section" class="navbar__links" id="author-page">مؤلفون</a>
+                        </li>
+                        <li class="navbar__item">
+                        <a href="#books" class="navbar__links" id="Books-page">كتب</a>
+                        </li>
+                        <li class="#navbar__item">
+                            <a href="#" class="navbar__links" id="home-page">الرئسية</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="navbar__logo">
+                    <i class="fas fa-book-open"></i>
+                    <h1>مكتبة البيان</h1>
+                </div>
+            </div>
+        </header>
+
+        <!--Books Section-->
+        <section class="books"  id="books">
+            <!--previous button-->
+            <button id="next-btn">
+                <i class="fas fa-chevron-circle-left"></i>
+            </button>
+            <!--book-->
+            <div class="book " id="book">
+                <!--paper 1-->
+                <div class="paper" id="p1" >
+                    <div class="front">
+                        <div class="front-content" id="f1">
+                            <img src="imges/books/القرآن الكريم_ورش.jpg">
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b1">
+                            <p dir="rtl">
+                                بعض الكتب يمكن تذوّقها، والبعض الآخر يمكن ابتلاعها، والقليل منها تمضغ وتهضم
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 2-->
+                <div class="paper" id="p2">
+                    <div class="front">
+                        <div class="front-content" id="f2">
+                            <img src="imges/books/خولة حمدي_أين المفر.jpg" >
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b2">
+                            <h1>القرآن الكريم</h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl">القرآن الكريم  <br> رواية ورش عن نافع عن طريق الأزرق </p>
+                            <a href="books/القرآن الكريم_ورش.zip" download="القرآن الكريم_ورش.zip" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 3-->
+                <div class="paper" id="p3">
+                    <div class="front">
+                        <div class="front-content" id="f3">
+                            <img src="imges/books/مصطفى محمود_حوار مع صديقي الملحد.jpg" >
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b3">
+                            <h1>أين المفر </h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl" >
+                                واحدة من أشهر روايات الدكتورة خولة حمدي، وواحدة من أشهر روايات الأدب الإسلامي. وقد لاقت هذه الرواية شهرة كبيرة في الأوساط الشبابية والثقافية. كما حقق هذا الكتاب مبيعات ضخمة، فتصدر الكتب الأكثر مبيعًا لهذه الكاتبة. <br>تتحدث الكاتبة في بداية الرواية عن الثورة التونسية، ثم بدأت من هذه الأحداث قصة تخلط فيها بين مشاعر الحب والوطنية والثورية، وهذا الخليط يُهيج نفس القارئ فيتفاعل مع الرواية كلمةً كلمة وجملةً جملة.
+                            </p>
+                            <a href="#a3" class="auther-name"> الكاتبة : خولة حمدي</a>
+                            <a href="books/خولة حمدي_أين المفر.pdf" download="خولة حمدي_أين المفر.pdf" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 4-->
+                <div class="paper" id="p4">
+                    <div class="front">
+                        <div class="front-content" id="f4">
+                            <img src="imges/books/مصطفى محمود_الشفاعة.webp" >
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b4">
+                            <h1>حوار مع صديقي الملحد</h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl">
+                                يرد فيه الكاتب على أسئلة لملحدين عن الدين الإسلامي، وعن تساؤلات مادية قد يطرحها العقل البشري في فترة ما. الكتاب يصف محاورة فكرية بين الدكتور مصطفى محمود وصديق خيالي ملحد، يطرح الأسئلة الإلحادية المعروفة مثل: "هل الله موجود؟" و"من خلق الله؟" ويقوم مصطفى محمود بالإجابة العلمية بشكل منطقي على العديد من هذه الأسئلة.
+                            </p>
+                            <a href="#a7" class="auther-name"> الكاتب : مصطفى محمود</a>
+                            <a href="books/مصطفى محمود_حوار مع صديقي الملحد.pdf" download="مصطفى محمود_حوار مع صديقي الملحد.pdf" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 5-->
+                <div class="paper" id="p5">
+                    <div class="front">
+                        <div class="front-content" id="f5">
+                            <img src="imges/books/خولة حمدي_أحلام الشباب.jpg" >
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b5">
+                            <h1>الشفاعة</h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl">
+                                رحلة ممتعة مليئة بالإثارة من النرويج إلى الولايات المتحدة، مرورا بليبيريا ومصر وأستراليا، قبل أن يستقر عند خط الاستواء. يطرح العديد من الأفكار الجريئة ليظل السؤال: هل يمكن لرجل واحد أن يُصلح العالم، حتى لو كان يؤمن بأنه الشخص المناسب الذي جاء في الزمن المناسب ليقوم بالمهمة المناسبة؟
+                            </p>
+                            <a href="#a7" class="auther-name"> الكاتب : مصطفى محمود</a>
+                            <a href="books/مصطفى محمود_الشفاعة.pdf" download="مصطفى محمود_الشفاعة.pdf" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 6-->
+                <div class="paper" id="p6">
+                    <div class="front">
+                        <div class="front-content" id="f6">
+                            <img src="imges/books/أحمد خالد توفيق_يوتوبيا.jpg" >
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b6">
+                            <h1>أحلام شباب</h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl">
+                                رحلة ممتعة مليئة بالإثارة من النرويج إلى الولايات المتحدة، مرورا بليبيريا ومصر وأستراليا، قبل أن يستقر عند خط الاستواء. يطرح العديد من الأفكار الجريئة ليظل السؤال: هل يمكن لرجل واحد أن يُصلح العالم، حتى لو كان يؤمن بأنه الشخص المناسب الذي جاء في الزمن المناسب ليقوم بالمهمة المناسبة؟
+                            </p>
+                            <a href="#a3" class="auther-name"> الكاتبة : خولة حمدي</a>
+                            <a href="books/خولة حمدي_أحلام الشباب.pdf" download="خولة حمدي_أحلام الشباب.pdf" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 7-->
+                <div class="paper" id="p7">
+                    <div class="front">
+                        <div class="front-content" id="f7">
+                            <img src="imges/books/أحمد خالد توفيق_شآبيب.jpg" >
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b7">
+                            <h1>يوتوبيا</h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl">
+                                رحلة ممتعة مليئة بالإثارة من النرويج إلى الولايات المتحدة، مرورا بليبيريا ومصر وأستراليا، قبل أن يستقر عند خط الاستواء. يطرح العديد من الأفكار الجريئة ليظل السؤال: هل يمكن لرجل واحد أن يُصلح العالم، حتى لو كان يؤمن بأنه الشخص المناسب الذي جاء في الزمن المناسب ليقوم بالمهمة المناسبة؟
+                            </p>
+                            <a href="#a2" class="auther-name"> الكاتب : أحمد خالد توفيق</a>
+                            <a href="books/أحمد خالد توفيق_يوتوبيا.pdf" download="أحمد خالد توفيق_يوتوبيا.pdf" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 8-->
+                <div class="paper" id="p8">
+                    <div class="front">
+                        <div class="front-content" id="f8">
+                            <img src="imges/books/أحمد خالد توفيق_شاي بالنعناع.jpg" >
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b8">
+                            <h1>شآبيب</h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl">
+                                رحلة ممتعة مليئة بالإثارة من النرويج إلى الولايات المتحدة، مرورا بليبيريا ومصر وأستراليا، قبل أن يستقر عند خط الاستواء. يطرح العديد من الأفكار الجريئة ليظل السؤال: هل يمكن لرجل واحد أن يُصلح العالم، حتى لو كان يؤمن بأنه الشخص المناسب الذي جاء في الزمن المناسب ليقوم بالمهمة المناسبة؟
+                            </p>
+                            <a href="#a2" class="auther-name"> الكاتب : أحمد خالد توفيق</a>
+                            <a href="books/أحمد خالد توفيق_شآبيب.pdf" download="أحمد خالد توفيق_شآبيب.pdf" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 9-->
+                <div class="paper" id="p9">
+                    <div class="front">
+                        <div class="front-content" id="f9">
+                            <img src="imges/books/أجاثا كريستي_جريمة في قطار الشرق.jpg" >
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b9">
+                            <h1>شاي بالنعناع</h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl">
+                                هذا الكتاب يحتوي مجموعة من المقالات عددها سبعة عشر مقالًا. وتتنوع المقالات ما بين الطول والقصر. وهذه المقالات هي مقالات نقدية متنوعة. يظهر من خلالها حس الدكتور أحمد خالد توفيق الفكاهي وأسلوبه السلس والبسيط.
+                            </p>
+                            <a href="#a2" class="auther-name"> الكاتب : أحمد خالد توفيق</a>
+                            <a href="books/أحمد خالد توفيق_شاي بالنعناع.pdf" download="أحمد خالد توفيق_شاي بالنعناع.pdf" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 10-->
+                <div class="paper" id="p10">
+                    <div class="front">
+                        <div class="front-content" id="f10">
+                            <img src="imges/books/أجاثا كريستي_وإختفى كل شيء.jpg" >
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b10">
+                            <h1>جريمة في قطار الشرق</h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl">
+                                بطلها السيد هيركيول بوارو المحقق البلجيكي الشهير الذي نقابله مرة أخرى بعد رواية مقتل اللورد إدجر حيث عمل على حل القضية بحنكته. وهنا هل سيعود مجدداً ليحل لغز جريمة قتل المواطن الأمريكي " صامويل راتشيت " وهل سيستطيع معرفة ماضي القتيل؟ وما هي علاقة المسافرين الذين ينتمون إلى جنسيات وطبقات اجتماعية مختلفة بالقتيل؟ هذا ما سنعرفه عند قراءتنا لهذه الرواية الذي تصنف من أبرع الرووايات على الأطلاق. حيث جاء الحل عبقرياً.
+                            </p>
+                            <a href="#a1" class="auther-name">الكاتبة : أجاثا كريستي </a>
+                            <a href="books/أجاثا كريستي_جريمة في قطار الشرق.pdf" download="أجاثا كريستي_جريمة في قطار الشرق.pdf" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 11-->
+                <div class="paper" id="p11">
+                    <div class="front">
+                        <div class="front-content" id="f11">
+                            <img src="imges/books/أجاثا كريستي_جريمة في بيت الطالبات.jpg" >
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b11">
+                            <h1>وإختفى كل شيء</h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl">
+                                دعوة يتم توجيهها لعشرة أشخاص لقضاء وقت ممتع على جزيرة كثرت حولها الأقاويل والشائعات ، وأنشودة هندية تتحدث عن قتل هؤلاء الأشخاص واحدًا تلو الآخر ، ولكن المفاجأة أن سطور تلك الأنشودة تتحقق بالفعل ، ويتساقط شخص وراء الآخر حيث يحيط الشك والريبة بالجميع ، حيث يستمع كل منهم إلى صوت ضميره بأن ذلك هو العقاب لما ارتكبه من آثام في الماضي وأنه سوف يلقى جزاءه لقاء ما فعل.
+                            </p>
+                            <a href="#a1" class="auther-name"> الكاتبة : أجاثا كريستي </a>
+                            <a href="books/أجاثا كريستي_وإختفى كل شيء.pdf" download="أجاثا كريستي_وإختفى كل شيء.pdf" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 12-->
+                <div class="paper" id="p12">
+                    <div class="front">
+                        <div class="front-content" id="f12">
+                            <img src="imges/books/نجيب محفوظ_حديث الصباح و المساء.jpg" >
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b12">
+                            <h1>جريمة في بيت الطالبات</h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl">
+                                بيت من بيوت الطالبات، جرت فيه حوادث سرقات غريبة، ولم يكن داء السرقة من تلك الجرائم التى تثير اهتمام “هركيول”، ولكن عند مطالعته قائمة المسروقات الغريبة ووجدها: سماعة طبيب، بعض البنطلونات القديمة المصنوعة من القماش الرقيق الناعم … تأمل “هركيول” جريمة السرقة التى وقعت فى أحد بيوت الطالبات وتساءل متعجباً إذا كانت هى مجرد حادثة سرقة صغيرة لا خوف منها ، فلماذا تشعر كل طالبة بالهلع الشديد؟!
+                            </p>
+                            <a href="#a1" class="auther-name"> الكاتبة : أجاثا كريستي</a>
+                            <a href="books/أجاثا كريستي_جريمة في بيت الطالبات.pdf" download="أجاثا كريستي_جريمة في بيت الطالبات.pdf" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 13-->
+                <div class="paper" id="p13">
+                    <div class="front">
+                        <div class="front-content" id="f13">
+                            <img src="imges/books/نجيب محفوظ_أولاد حارتنا.png" >
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b13">
+                            <h1>حديث الصباح و المساء</h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl">
+                                تُعد «سيرة ابن هشام» العمل الأبرز في تسجيل تاريخ الإسلام، والمصدر الأول والأشمل لسيرة النبي صلى الله عليه وسلم؛ فقد سجلت معظم الأحداث المتعلقة بالرسول والجزيرة العربية منذ عصر الجاهلية حتى وفاة الرسول.
+                            </p>
+                            <a href="#a8" class="auther-name"> الكاتب : نجيب محفوظ</a>
+                            <a href="books/نجيب محفوظ_حديث الصباح و المساء.pdf" download="نجيب محفوظ_حديث الصباح و المساء.pdf" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 14-->
+                <div class="paper" id="p14">
+                    <div class="front">
+                        <div class="front-content" id="f14">
+                            <img src="imges/books/طه حسين_الشيخان.jpg" >
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b14">
+                            <h1>أولاد حارتنا</h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl">
+                                تُعد «سيرة ابن هشام» العمل الأبرز في تسجيل تاريخ الإسلام، والمصدر الأول والأشمل لسيرة النبي صلى الله عليه وسلم؛ فقد سجلت معظم الأحداث المتعلقة بالرسول والجزيرة العربية منذ عصر الجاهلية حتى وفاة الرسول.
+                            </p>
+                            <a href="#a8" class="auther-name"> الكاتب : نجيب محفوظ</a>
+                            <a href="books/نجيب محفوظ_أولاد حارتنا.pdf" download="نجيب محفوظ_أولاد حارتنا.pdf" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 15-->
+                <div class="paper" id="p15">
+                    <div class="front">
+                        <div class="front-content" id="f15">
+                            <img src="imges/books/طه حسين_على هامش السيرة.jpg" >
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b15">
+                            <h1>الشيخان</h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl">
+                                تُعد «سيرة ابن هشام» العمل الأبرز في تسجيل تاريخ الإسلام، والمصدر الأول والأشمل لسيرة النبي صلى الله عليه وسلم؛ فقد سجلت معظم الأحداث المتعلقة بالرسول والجزيرة العربية منذ عصر الجاهلية حتى وفاة الرسول.
+                            </p>
+                            <a href="#a5" class="auther-name"> الكاتب : طه حسين</a>
+                            <a href="books/طه حسين_الشيخان.pdf" download="طه حسين_الشيخان.pdf" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 16-->
+                <div class="paper" id="p16">
+                    <div class="front">
+                        <div class="front-content" id="f16">
+                            <img src="imges/books/أدهم الشرقاوي_على منهاج النبوة.jpg" >
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b16">
+                            <h1>على هامش السيرة</h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl">
+                                تُعد «سيرة ابن هشام» العمل الأبرز في تسجيل تاريخ الإسلام، والمصدر الأول والأشمل لسيرة النبي صلى الله عليه وسلم؛ فقد سجلت معظم الأحداث المتعلقة بالرسول والجزيرة العربية منذ عصر الجاهلية حتى وفاة الرسول.
+                            </p>
+                            <a href="#a5" class="auther-name"> الكاتب : طه حسين</a>
+                            <a href="books/طه حسين_على هامش السيرة.pdf" download="طه حسين_على هامش السيرة.pdf" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 17-->
+                <div class="paper" id="p17">
+                    <div class="front">
+                        <div class="front-content" id="f17">
+                            <img src="imges/books/أدهم الشرقاوي_ليطمئن قلبي.jpg" >
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b17">
+                            <h1>على منهاج النبوة</h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl">
+                                منذ 1442سنة ، ضاقت عليه مكة فخرج مهاجراً تحت جنح الظلام وبعد ثمانى سنوات عاد إليها فى وضح النهار ودخلها بجيشه من أبوابها الأربعة <br>!
+                                الدين الذي بدأ برجلٍ نزل يوماً من غارٍ مظلمٍ في مكة حاملاً النور إلى هذا العالم ، يؤمن به اليوم مليار ونصف إنسان واسمه تردده المآذن ..
+                                أشهدُ أنِّ محمداً رسول الله
+                            </p>
+                            <a href="#a4" class="auther-name"> الكاتب : أدهم الشرقاوي</a>
+                            <a href="books/أدهم الشرقاوي_على منهاج النبوة.pdf" download="أدهم الشرقاوي_على منهاج النبوة.pdf" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 18-->
+                <div class="paper" id="p18">
+                    <div class="front">
+                        <div class="front-content" id="f18">
+                            <img src="imges/books/أدهم الشرقاوي_نبأ يقين.jpg" >
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b18">
+                            <h1>ليطمئن قلبي</h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl">
+                                ذهب الرازي يوما الى نيسابور فتراكض له الناس فقالت امرأة عجوز: من هذا؟ فقيل لها: هذا الرازي الذي يعرف ألف دليل على وجود الله فقالت: لو لم يكن في قلبه ألف شك ما احتاج الى ألف دليل! فلما بلغه قولها، قال: اللهم إيمانا كإيمان العجائز! هذه الرواية مهداة الى المؤمنين بالله إيمان العجائز بلا فلسفة ولا تعقيد.. الذين لو قيل لأحدهم أعطنا دليلا على وجود الله لربما تلعثم ولم تسعفه لغته، ولكن ما يضره وحسبه من الإيمان أن كل خلية في جسمه تؤمن أن: لا إله إلا الله وأن محمداً رسول الله
+                            </p>
+                            <a href="#a4" class="auther-name"> الكاتب : أدهم الشرقاوي</a>
+                            <a href="books/أدهم الشرقاوي_ليطمئن قلبي.pdf" download="أدهم الشرقاوي_ليطمئن قلبي.pdf" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 19-->
+                <div class="paper" id="p19">
+                    <div class="front">
+                        <div class="front-content" id="f19">
+                            <img src="imges/books/عمرو عبد الحميد_أرض زيكولا.jpg">
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b19">
+                            <h1>نبأ يقين</h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl">
+                                يطوف بنا الكاتب بين مواقف السلف والحكمة والحياة والعلم والدين ، وجميعها مواقف تربوية رائعة ..
+                            </p>
+                            <a href="#a4" class="auther-name"> الكاتب : أدهم الشرقاوي</a>
+                            <a href="books/أدهم الشرقاوي_نبأ يقين.pdf" download="أدهم الشرقاوي_نبأ يقين.pdf" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+                <!--paper 20-->
+                <div class="paper" id="p20">
+                    <div class="front">
+                        <div class="front-content" id="f20">
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content" id="b20">
+                            <h1>أرض زيكولا</h1>
+                            <h2>عن الكتاب</h2>
+                            <p dir="rtl">
+                                رواية خيالية بطلها شاب من قرية البهو فريك يجد نفسه يوما في أرض لا تتعامل بالنقود كسائر البشر، وبدل ذلك وحدات الذكاء فكل عمل مقابل مال في أرضنا يعادل هناك قيمة معينة من وحدات الذكاء.
+                            </p>
+                            <a href="#a6" class="auther-name"> الكاتب : عمرو عبد الحميد</a>
+                            <a href="books/عمرو عبد الحميد_أرض زيكولا.pdf" download="عمرو عبد الحميد_أرض زيكولا.pdf" class="download-btn">تحميل</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--next button-->
+            <button id="prev-btn">
+                <i class="fas fa-chevron-circle-right"></i>
+            </button>
+        </section>
+
+        <!--Authors--> 
+        <section class="authors_section" id="authors_section">
+            <h2>مؤلفون</h2>
+            <div class="authors__container">
+                <div class="author" id="a1">
+                    <div class="img__name_Bx">
+                        <img src="imges/authors/أجاثا كريستي.png" alt="أجاثا كريستي">
+                        <h1>أجاثا كريستي</h1>
+                    </div>
+                    <div class="desc">
+                        <p dir="rtl">
+                            <br>
+                            Agatha Christie<br>
+                            وتعرف أيضا السيدة مالوان <br>
+                            ولدت أجاثا كريستي في عام 1890 من أب أمريكي وأم إنجليزية،
+                            تربعت أجاثا كريستي على عرش روايات الجرائم الإنكليزية طوال نصف قرن دون مزاحمة
+                            اشتهرت بكتابة روايات الجرائم لكنها أيضا كتبت روايات رومانسية باسم مستعار هو ماري ويستماكوت تعد أعظم مؤلفة روايات جرائم في التاريخ حيث بيعت أكثر من مليار نسخة من رواياتها التي ترجمت لأكثر من 103 لغات
+                        </p>
+                    </div>
+                </div>
+                <div  class="author" id="a2">
+                    <div class="img__name_Bx">
+                        <img src="imges/authors/أحمد خالد توفيق.jpg" alt="أحمد خالد توفيق">
+                        <h1>أحمد خالد توفيق</h1>
+                    </div>
+                    <div class="desc">
+                        <p dir="rtl"> <br>
+                            أحمد خالد توفيق فراج (10 يونيو 1962 – 15 رجب 1439 هـ / 2 أبريل 2018)، طبيب، وكاتب، ومؤلف، ومترجم مصري. يُعد أول كاتب عربي في مجال أدب الرعب. والأشهر في مجال أدب الشباب، والفنتازيا، والخيال العلمي. لُقب بـ العراب
+                            <br>
+                            بدأ رحلته الأدبية مع كتابة سلسلة ما وراء الطبيعة، و رغم أن أدب الرعب لم يكن سائدا في ذلك الوقت، فإن السلسة حققت نجاحا كبيرا، و استقبالا جيدا من الجمهور
+                        </p>
+                    </div>
+                </div>
+                <div class="author" id="a3">
+                    <div class="img__name_Bx">
+                        <img src="imges/authors/خولة حمدي.jpg" alt="خولة حمدي">
+                        <h1>خولة حمدي</h1>
+                    </div>
+                    <div class="desc">
+                        <p dir="rtl">
+                            <br>  خولة حمدي كاتبة تونسية، وأستاذة جامعية في تقنية المعلومات بجامعة الملك سعود بالرياض. ولدت 1984 بتونس العاصمة، وحصلت على شهادة في الهندسة الصناعية وماجستير من مدرسة "المناجم" في مدينة سانت إتيان الفرنسية سنة 2008، وعلى الدكتوراه في بحوث العمليات (أحد فروع الرياضيات التطبيقية) من جامعة التكنولوجيا بمدينة تروا بفرنسا سنة 2011
+                            <br>روايتها الأولى هي في قلبي أنثى عبرية
+                        </p>
+                    </div>
+                </div>
+                <div  class="author" id="a4">
+                    <div class="img__name_Bx">
+                        <img src="imges/authors/أدهم الشرقاوي.jpg" alt="أدهم الشرقاوي">
+                        <h1>أدهم الشرقاوي</h1>
+                    </div>
+                    <div class="desc">
+                        <p dir="rtl">
+                            من الكتاب المتميزين الذي برعوا في الأدب العربي، حيث تميز بثقافته الواسعة واطلاعه الكبير هذه الثقافة التي ظهرت جليًا في كتاباته ومؤلفاته. أدهم الشرقاوي فلسطيني ولد ونشأ في مدينة صور اللبنانية حاصل على دبلوم دار معلمين من الأونيسكو، دبلوم تربية رياضية من الأونيسكو، إجازة في الأدب العربي من الجامعة اللبنانية في بيروت، ماجستير في الأدب العربي. عمل في صحيفة الوطن القطرية بدأ بالكتابة عبر منصة منتدى الساخر ثم أصدر أول كتاب له عام 2012 بعنوان أحاديث الصباح. ينشر كتاباته تحت اسم مستعار  قس بن ساعدة
+                        </p>
+                    </div>
+                </div>
+                <div class="author" id="a5">
+                    <div class="img__name_Bx">
+                        <img src="imges/authors/طه حسين.jpg" alt="طه حسين">
+                        <h1>طه حسين</h1>
+                    </div>
+                    <div class="desc">
+                        <p dir="rtl">
+                            أديب وناقد مصري، لُقّب بعميد الأدب العربي. غيّر الرواية العربية، مبدع السيرة الذاتية في كتابه «الأيام» الذي نشر عام 1929. يعتبر من أبرز الشخصيات في الحركة العربية الأدبية الحديثة. لا تزال أفكار ومواقف طه حسين تثير الجدل حتى اليوم. درس في الأزهر، ثم التحق بالجامعة الأهلية حين افتتحت عام 1908، وحصل على الدكتوراه عام 1914 ثم ابتعث إلى فرنسا ليكمل الدراسة. عاد إلى مصر ليعمل أستاذا للتاريخ ثم أستاذا للغة العربية. عمل عميدا لكلية الآداب، ثم مديرا لجامعة الإسكندرية، ثم وزيرا للمعارف
+                        </p>
+                    </div>
+                </div>
+                <div class="author" id="a6">
+                    <div class="img__name_Bx">
+                        <img src="imges/authors/عمرو عبد الحميد.jpg" alt="عمرو عبد الحميد">
+                        <h1>عمرو عبد الحميد</h1>
+                    </div>
+                    <div class="desc">
+                        <p dir="rtl">
+                            <br>  عمرو عبد الحميد مواليد محافظة الدقهلية في 1987م 
+                            <br>   هو كاتب روائي مصري. درس الطب متخصصاً بجراحة الأنف والأذن والحنجرة بجامعة المنصورة. اشتهر كاتبًا في مجال الخيال بأول أعماله المنشورة وهي ثنائية أرض زيكولا و أماريتا، 
+                            <br>   وصدر له مؤخراً دقات الشامو الجزء الثاني من رواية قواعد جارتين وجزئها الثالث أمواج أكما 
+                        </p>
+                    </div>
+                </div>
+                <div class="author" id="a7">
+                    <div class="img__name_Bx">
+                        <img src="imges/authors/مصطفى محمود.jpg" alt="مصطفى محمود">
+                        <h1>مصطفى محمود</h1>
+                    </div>
+                    <div class="desc">
+                        <p dir="rtl"><br> 
+                            فيلسوف وطبيب وكاتب مصري
+                            <br> درس الطب وتخرج عام 1953 وتخصَّص في الأمراض الصدرية، ولكنه تفرغ للكتابة والبحث عام 1960. 
+                            ألف 89 كتاباً منها الكتب العلمية والدينية والفلسفية والاجتماعية والسياسية إضافة إلى الحكايات والمسرحيات وقصص الرحلات، ويتميز أسلوبه بالجاذبية مع العمق والبساطة.
+                            قدم الدكتور مصطفى محمود أكثر من 400 حلقة من برنامجه التلفزيوني الشهير (العلم والإيمان) 
+                        </p>
+                    </div>
+                </div>
+                <div class="author" id="a8">
+                    <div class="img__name_Bx">
+                        <img src="imges/authors/نجيب محفوظ.jpg" alt="نجيب محفوظ">
+                        <h1>نجيب محفوظ</h1>
+                    </div>
+                    <div class="desc">
+                        <p dir="rtl"><br>
+                            نجيب محفوظ عبد العزيز إبراهيم أحمد الباشا، والمعروف باسمه الأدبي نجيب محفوظ
+                            <br> وهو روائي، وكاتب مصري. يُعد أول أديب عربي حائز على جائزة نوبل في الأدب. كتب نجيب محفوظ منذ الثلاثينات، واستمر حتى 2004. تدور أحداث جميع رواياته في مصر، وتظهر فيها سمة متكررة هي الحارة التي تعادل العالم. من أشهر أعماله: الثلاثية، وأولاد حارتنا. يُعد محفوظ أكثر أديب عربي نُقلت أعماله إلى السينما والتلفزيون
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--Quots-->
+        <section class="quots" id="quots">
+            <h2>إقتباسات</h2>
+            <div class="wrapper">
+                <div class="carousel owl-carousel">
+                    <div class="card">
+                        <i class="fas fa-quote-right"></i>
+                        <p class="text" dir="rtl">إنّ أقرب الناس للعقل والحكمة هو من يدرك نواقص نفسه وعدم خلوه من عيوب التفكير السليم</p>
+                        <i class="fas fa-quote-left"></i>
+                        <h3 class="sayer">فهد عامر الأحمدي</h3>
+                        <p class="in-book">نظرية الفستق</p>
+                    </div>
+                    <div class="card"> 
+                        <i class="fas fa-quote-right"></i>
+                        <p class="text" dir="rtl">
+                            العوارض والمِحن هي كالحر والبرد، فإذا علِم العبد أنه لا بدَّ منهما، لم يغضب لوُرودهما، ولم يَغتمَّ لذلك، ولم يَحزن
+                        </p>
+                        <i class="fas fa-quote-left"></i>
+                        <h3 class="sayer">ابن القيم</h3>
+                        <p class="in-book">مدارج السالكين</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-quote-right"></i>
+                        <p class="text" dir="rtl">
+                            إنني لا أحيا في ماضيَ، ولا في مستقبلي. ليس لي سوى الحاضر، وهو وحده ما يهمني. إذا كان باستطاعتك البقاء دائماً في الحاضر، تكون عندئذ إنساناً سعيداً
+                        </p>
+                        <i class="fas fa-quote-left"></i>
+                        <h3 class="sayer">باولوكويلو</h3>
+                        <p class="in-book">الخيميائي</p>
+                    </div>
+                    <div class="card"> 
+                        <i class="fas fa-quote-right"></i>
+                        <p class="text" dir="rtl">
+                            الحداد ليس فيما نرتديه بل فيما نراه، إنّه يكمن في نظرتنا للأشياء، بإمكان عيون قلبنا أن تكون في حداد، ولا أحد يدري بذلك
+                        </p>
+                        <i class="fas fa-quote-left"></i>
+                        <h3 class="sayer">أحلام مستغانمي</h3>
+                        <p class="in-book">الأسود يليق بك</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-quote-right"></i>
+                        <p class="text" dir="rtl">
+                            أفكارك الحالية تشكل حياتك المستقبلية، ما تركز عليه غالبًا أو تفكر فيه سوف يظهر في حياتك.
+                        </p>
+                        <i class="fas fa-quote-left"></i>
+                        <h3 class="sayer">روندا بايرن</h3>
+                        <p class="in-book">السر</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-quote-right"></i>
+                        <p class="text" dir="rtl">
+                            الأخطاء ذنوب من الشيطان، أما العادات ذنوب من النفس
+                        </p>
+                        <i class="fas fa-quote-left"></i>
+                        <h3 class="sayer">أحمد الشقيري</h3>
+                        <p class="in-book">40أربعون</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-quote-right"></i>
+                        <p class="text" dir="rtl">
+                            يُؤَجِلُ الله أُمنِيَاتِنا, ولا يَنسَاها
+                        </p>
+                        <i class="fas fa-quote-left"></i>
+                        <h3 class="sayer">محمد حسن علوان </h3>
+                        <p class="in-book">سقف الكفاية</p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-quote-right"></i>
+                        <p class="text" dir="rtl">
+                            لا تخشى الاطلاع على الأفكار التي تخالف ما نشأت عليه (فبهذه الطريقة فقط تتعلم أشياء جديدة)
+                        </p>
+                        <i class="fas fa-quote-left"></i>
+                        <h3 class="sayer">فهد عامر الأحمدي</h3>
+                        <p class="in-book">نظرية الفستق</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--sci book-->
+        <section class="sci-books" id="sci-books">
+            <h2>كتب علمية</h2>
+            <div class="sci-book__wrapper">
+                <div class="book_sci">
+                    <img src="imges/Sci books/img/Getting Started with CSS.jpg"alt="Getting Started with CSS" class="book-c">
+                    <div class="downloadBtn">
+                        <a href="imges/Sci books/Getting Started with CSS.pdf" download="Getting Started with CSS.pdf" class="sci__download-btn">تحميل</a>
+                    </div>
+                </div>
+                <div class="book_sci">
+                    <img src="imges/Sci books/img/Guide To HTML5 And CSS3 Web Design.jpg"  alt="Guide To HTML5 And CSS3 Web Design" class="book-c">
+                    <div class="downloadBtn">
+                        <a href="imges/Sci books/Guide To HTML5 And CSS3 Web Design.pdf" download="Guide To HTML5 And CSS3 Web Design.pdf" class="sci__download-btn">تحميل</a>
+                    </div>
+                </div>
+                <div class="book_sci">
+                    <img src="imges/Sci books/img/html and css.jpg"  alt="html and css" class="book-c">
+                    <div class="downloadBtn">
+                        <a href="imges/Sci books/img/html and css.jpg" download="html and css.pdf" class="sci__download-btn">تحميل</a>
+                    </div>
+                </div>
+                <div class="book_sci">
+                    <img src="imges/Sci books/img/الرياضيات للفضوليين.webp" alt="الرياضيات للفضوليين" class="book-c" >
+                    <div class="downloadBtn">
+                        <a href="imges/Sci books/الرياضيات للفوضوليين.pdf" download="الرياضيات للفوضوليين.pdf" class="sci__download-btn">تحميل</a>
+                    </div>
+                </div>
+                <div class="book_sci">
+                    <img src="imges/Sci books/img/كشف أسرار الفيزياء.jpg"  alt="كشف أسرار الفيزياء" class="book-c">
+                    <div class="downloadBtn">
+                        <a href="imges/Sci books/كشف أسرار الفيزياء.pdf" download="كشف أسرار الفيزياء.pdf" class="sci__download-btn">تحميل</a>
+                    </div>
+                </div>
+                <div class="book_sci">
+                    <img src="imges/Sci books/img/لغة c الشامل.png" alt="لغة c الشامل" class="book-c" >
+                    <div class="downloadBtn">
+                        <a href="imges/Sci books/كتاب اللغة C الشامل .PDF" download="كتاب اللغة C الشامل .PDF" class="sci__download-btn">تحميل</a>
+                    </div>
+                </div>
+                <div class="book_sci">
+                    <img src="imges/Sci books/img/مجلة الفيزياء العصرية.jpg" alt="مجلة الفيزياء العصرية" class="book-c" >
+                    <div class="downloadBtn">
+                        <a href="imges/Sci books/مجلة الفيزياء العصرية7.pdf" download="مجلة الفيزياء العصرية7.pdf" class="sci__download-btn">تحميل</a>
+                    </div>
+                </div>
+                <div class="book_sci">
+                    <img src="imges/Sci books/img/مدخل إلى عالم الذكاء الإصطناعي.jpg" alt="مدخل إلى عالم الذكاء الإصطناعي" class="book-c" >
+                    <div class="downloadBtn">
+                        <a href="imges/Sci books/مدخل إلى عالم الذكاء الإصطناعي.pdf" download="مدخل إلى عالم الذكاء الإصطناعي.pdf" class="sci__download-btn">تحميل</a>
+                    </div>
+                </div>
+                <div class="book_sci">
+                    <img src="imges/Sci books/img/Java-All-In-One-Desk-Reference-For-Dummies.jpg"  alt="Java All In One Desk Reference For Dummies" class="book-c">
+                    <div class="downloadBtn">
+                        <a href="imges/Sci books/Java-All-In-One-Desk-Reference-For-Dummies.pdf" download="Java All In One Desk Reference For Dummies.pdf" class="sci__download-btn">تحميل</a>
+                    </div>
+                </div>
+                <div class="book_sci">
+                    <img src="imges/Sci books/img/learning JavaScript 3rd edition.jpg"  alt="learning JavaScript 3rd edition" class="book-c">
+                    <div class="downloadBtn">
+                        <a href="imges/Sci books/Learning_JavaScript3rdEdition.pdf" download="Learning JavaScript 3rd Edition.pdf" class="sci__download-btn">تحميل</a>
+                    </div>
+                </div>
+            </div> 
+        </section>
+
+        <!--footer-->
+        <footer>
+            <div class="footer__links">
+                <div class="follow">
+                    <p>تابعنا</p>
+                    <ul class="icons">
+                        <li>
+                            <a onclick="alert('لم ننشأ بعد صفحة فيسبوك');"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                            <a onclick="alert('لم ننشأ بعد حساب تويتر');"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a onclick="alert('لم ننشأ بعد حساب انستقرام');"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a onclick="alert('لم ننشأ بعد قناة تيليغرام');"><i class="fab fa-telegram-plane"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="links">
+                    <p>روابط</p>
+                    <ul>
+                        <li class="footer__item">
+                            <a href="#authors_section" class="footer__link" id="author-page">مؤلفون</a>
+                        </li> 
+                        <li class="footer__item">
+                            <a href="#books" class="footer__link" id="Books-page">كتب</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#" class="footer__link" id="home-page">الرئيسية</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="contact_us.html" target="_blank" class="footer__link" id="contact-page">إتصل بنا</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#sci-books" class="footer__link" id="Sci_books-page">كتب علمية</a>
+                        </li>
+                        <li class="footer__item">
+                            <a href="#quots" class="footer__link" id="quots-page">إقتباسات</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <div class="_footer">
+            <div class="year">
+                <p> < SCC 2021 /></p>
+                <i></i>
+            </div>
+            <div class="maded">
+                <p> صنع بــ <i class="fas fa-heart"></i> من طرف بن عبد الصادق صفاء </p>
+            </div>
+        </div>
+        
+        <script src="js/script.js"></script>
+
+    </body>
+
+</html>
