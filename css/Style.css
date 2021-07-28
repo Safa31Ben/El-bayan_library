@@ -478,7 +478,7 @@ ul li .navbar__btn input[type="checkbox"]:checked ~ .icon-box .fas{
         transform: rotateX(180deg);
     }
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 460px){
     #b1 p{
         font-size: 25px;
     }
@@ -498,8 +498,8 @@ ul li .navbar__btn input[type="checkbox"]:checked ~ .icon-box .fas{
     }
 
     .back-content p{
-        padding: 5px;
-        font-size: 1rem;
+        padding: 0px;
+        font-size: 0.8rem;
     }
 }
 /*Authors*/

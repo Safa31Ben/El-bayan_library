@@ -54,14 +54,18 @@ const highlightMenu = () => {
             authors.classList.remove('highlight');
             quots.classList.add('highlight');
             sciBooks.classList.remove('highlight');
-        }else if(scrollPos <3500){
+        }else if(scrollPos <3700){
             sciBooks.classList.add('highlight');
             quots.classList.remove('highlight');
         }else{
-            ele.classList.remove('highlight');
+            if( ele){
+                ele.classList.remove('highlight');
+            }
         }
     }else{
-        ele.classList.remove('highlight');
+        if( ele){
+            ele.classList.remove('highlight');
+        }
     }
 }
 window.addEventListener('scroll', highlightMenu);
