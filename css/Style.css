@@ -477,9 +477,31 @@ ul li .navbar__btn input[type="checkbox"]:checked ~ .icon-box .fas{
     .front-content{
         transform: rotateX(180deg);
     }
-
 }
+@media screen and (max-width: 400px){
+    #b1 p{
+        font-size: 25px;
+    }
 
+    .back-content h1{
+        padding: 0;
+        font-size:1rem;
+    }
+    
+    .back-content h2{
+        font-size: 1rem;
+        color: #e5365d;
+    }
+    
+    #b18 a{
+        margin:0;
+    }
+
+    .back-content p{
+        padding: 5px;
+        font-size: 1rem;
+    }
+}
 /*Authors*/
 .authors_section{
     display: flex;
