@@ -336,7 +336,7 @@ ul li .navbar__btn input[type="checkbox"]:checked ~ .icon-box .fas{
 }
 
 #hard{
-    background: url("/imges/book_c.jpg") top center no-repeat;
+    background: url("/images/book_c.jpg") top center no-repeat;
     background-size: cover;
     border-radius: 6px;
 }
