@@ -308,6 +308,9 @@ ul li .navbar__btn input[type="checkbox"]:checked ~ .icon-box .fas{
     .navbar__logo {
         width:100vw;
     }
+    header.sticky .navbar__logo h1 {
+        display: none;
+    }
 }
 
 /*books*/
@@ -455,7 +458,7 @@ ul li .navbar__btn input[type="checkbox"]:checked ~ .icon-box .fas{
 
 .authors_section h2 , .quots h2 , .sci-books h2 {
     font-size: 3rem;
-    margin: 50px;
+    text-align: center;
     color:#e5365d;
 }
 
@@ -529,44 +532,54 @@ ul li .navbar__btn input[type="checkbox"]:checked ~ .icon-box .fas{
 }
 
 @media screen and (max-width: 460px){
+    
+    .authors_section h2 , .quots h2 , .sci-books h2 {
+        font-size: 2rem;
+        color:#e5365d;
+    }
     .authors__container{
         padding: 0px;
     }
     
     .authors__container .author{
         height: 250px;
-        width: 380px;
+        width: 250px;
     }
 
     .authors__container .author:hover{
-        height: 500px;
+        height:500px;
     }
 
     .authors__container .author .img__name_Bx{
-        width: 240px;
-        height: 240px;
+        width: 150px;
+        height: 150px;
         top: -40px;
         left: 45px;
     }
 
     .authors__container .author .img__name_Bx img{
-        width: 240px;
-        height: 240px;
+        width: 150px;
+        height: 150px;
     }
 
     .authors__container .author .img__name_Bx p{
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .authors__container .author .desc{
         margin-top: -140px;
-        padding: 5px 10px;
+        padding: 5px;
     }
 
     .authors__container .author:hover .desc{
         margin-top: -10px;
     }
+
+    .authors__container .author .img__name_Bx h1{
+        font-size: 1.2rem;
+    }
 }
+
 /* Quots */
 
 .quots{
@@ -667,6 +680,53 @@ ul li .navbar__btn input[type="checkbox"]:checked ~ .icon-box .fas{
 
 .owl-dot:hover, .owl-dot.active{
     background: #777 !important;
+}
+
+@media screen and (max-width: 460px){
+    .wrapper .carousel{
+        margin-bottom: 25px;
+        padding: 0 10px;
+        width: 100%;
+    }
+
+    .fa-quote-right ,.fa-quote-left{
+        font-size: 15px;
+    }
+
+    .fa-quote-left{
+        left: 10px;
+        top: 230px;
+    }
+
+    .fa-quote-right{
+        right: 10px;
+        top: 25px;
+    }
+
+    .text {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .sayer , .in-book{
+        font-size: 1em;
+    }
+
+    .sayer {
+        top: 230px;
+    }
+
+    .in-book{
+        top: 260px;
+    }
+
+    .carousel .card{
+        padding: 10px;
+    }
+
+    .owl-dots{
+        display: none;
+    }
 }
 
 /*sci books*/
@@ -907,8 +967,22 @@ footer a{
     }
 }
 @media screen and (max-width: 460px){
+    .follow .icons{
+        grid-template-columns: repeat(2,50px);
+        grid-gap: 20px;
+    }
+    
     ._footer{
         font-size: 0.8rem;
+        flex-direction:column-reverse;
+    }
+
+    .footer__links{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .footer__links ul {
+        grid-template-columns: 1fr 1fr;
     }
 }
 /*contact us*/
@@ -1129,7 +1203,7 @@ footer a{
         width: 60%;
     }
     
-    .follow .icons{
+    #body_cont .follow .icons{
         grid-template-columns: repeat(2,50px);
     }
     
@@ -1150,10 +1224,6 @@ footer a{
 }
 
 @media screen and (max-width:600px) {
-    .follow .icons{
-        grid-template-columns: repeat(4,50px);
-    }
-    
     .content_contact {
         padding: 10px 0;
         flex-direction: column-reverse;

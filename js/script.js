@@ -103,7 +103,7 @@ window.addEventListener('resize', function(){
 //owlCarousel
 $(document).ready( function(){
     $('.carousel').owlCarousel( { 
-            margin: 10 ,
+            margin: 20 ,
             loop: true,
             autoplay: true,
             autoplayTimeout: 2000,
